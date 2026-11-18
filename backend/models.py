@@ -1,109 +1,123 @@
-from datetime import datetime
-from sqlalchemy import create_engine, Column, Integer, String, Float, Text, DateTime, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
-from werkzeug.security import generate_password_hash, check_password_hash
-import json
+"""
+SQLAlchemy Database Models for Healthcare Assistance System
+"""
 
-Base = declarative_base()
+import datetime
+from sqlalchemy import (
+    Column, Integer, String, Float, Boolean, Text, DateTime, ForeignKey, JSON
+)
+from sqlalchemy.orm import relationship
+from .database import Base
 
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String(100), nullable=False)
-    email = Column(String(120), unique=True, nullable=False, index=True)
-    password_hash = Column(String(255), nullable=False)
-    role = Column(String(20), default='user', nullable=False)  # 'user' or 'admin'
-    created_at = Column(DateTime, default=datetime.utcnow)
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(50), unique=True, index=True, nullable=False)
+    email = Column(String(100), unique=True, index=True, nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    full_name = Column(String(100), default="Healthcare User")
+    role = Column(String(20), default="user") # user, clinician, admin
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
-    incidents = relationship('Incident', back_populates='reporter', cascade='all, delete-orphan')
+    profile = relationship("HealthProfile", back_populates="user", uselist=False)
+    chat_sessions = relationship("ChatSession", back_populates="user", cascade="all, delete-orphan")
+    metric_logs = relationship("HealthMetricLog", back_populates="user", cascade="all, delete-orphan")
+    predictions = relationship("PredictionLog", back_populates="user", cascade="all, delete-orphan")
 
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+class HealthProfile(Base):
+    __tablename__ = "health_profiles"
 
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), unique=True)
+    age = Column(Integer, nullable=True)
+    gender = Column(String(20), nullable=True)
+    height_cm = Column(Float, nullable=True)
+    weight_kg = Column(Float, nullable=True)
+    blood_group = Column(String(10), nullable=True)
+    primary_physician = Column(String(100), nullable=True)
+    chronic_conditions = Column(JSON, default=list) # e.g. ["Hypertension", "Asthma"]
+    allergies = Column(JSON, default=list) # e.g. ["Penicillin", "Peanuts"]
+    disclaimer_accepted = Column(Boolean, default=True)
+    disclaimer_accepted_at = Column(DateTime, default=datetime.datetime.utcnow)
+    preferred_units = Column(String(10), default="metric") # metric / imperial
+    theme_preference = Column(String(10), default="dark") # dark / light
+    updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    def to_dict(self):
-        return {
-            'id': self.id,
-            'name': self.name,
-            'email': self.email,
-            'role': self.role,
-            'created_at': self.created_at.isoformat() if self.created_at else None
-        }
+    user = relationship("User", back_populates="profile")
 
+class HealthMetricLog(Base):
+    __tablename__ = "health_metric_logs"
 
-class Incident(Base):
-    __tablename__ = 'incidents'
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), index=True)
+    metric_type = Column(String(50), nullable=False) # systolic_bp, diastolic_bp, heart_rate, blood_glucose, bmi, weight_kg
+    value = Column(Float, nullable=False)
+    unit = Column(String(20), nullable=False) # mmHg, bpm, mg/dL, kg/m2, kg
+    status = Column(String(30), default="Normal") # Normal, Elevated, High, Critical
+    notes = Column(Text, nullable=True)
+    recorded_at = Column(DateTime, default=datetime.datetime.utcnow)
 
-    id = Column(Integer, primary_key=True)
-    title = Column(String(200), nullable=False)
+    user = relationship("User", back_populates="metric_logs")
+
+class ChatSession(Base):
+    __tablename__ = "chat_sessions"
+
+    id = Column(String(64), primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), index=True)
+    title = Column(String(200), default="New Medical Consultation")
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
+
+    user = relationship("User", back_populates="chat_sessions")
+    messages = relationship("ChatMessage", back_populates="session", cascade="all, delete-orphan", order_by="ChatMessage.created_at")
+
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+
+    id = Column(Integer, primary_key=True, index=True)
+    session_id = Column(String(64), ForeignKey("chat_sessions.id"), index=True)
+    role = Column(String(20), nullable=False) # user, assistant, system
+    content = Column(Text, nullable=False)
+    sources = Column(JSON, default=list)
+    extracted_symptoms = Column(JSON, default=list)
+    simplified_terms = Column(JSON, default=dict) # e.g. {"dyspnea": "shortness of breath"}
+    is_emergency = Column(Boolean, default=False)
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+
+    session = relationship("ChatSession", back_populates="messages")
+
+class DatasetRegistry(Base):
+    __tablename__ = "dataset_registry"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(150), unique=True, index=True, nullable=False)
+    slug = Column(String(100), unique=True, index=True, nullable=False)
+    category = Column(String(80), nullable=False)
     description = Column(Text, nullable=False)
-    category = Column(String(50), nullable=False)  # Flood, Earthquake, Fire, Cyclone, Landslide, Other
-    predicted_category = Column(String(50), nullable=True)
-    prediction_confidence = Column(Float, default=0.0)
-    severity = Column(String(20), default='MEDIUM', nullable=False)  # LOW, MEDIUM, HIGH, CRITICAL
-    severity_score = Column(Float, default=50.0)
-    severity_factors = Column(Text, nullable=True)  # JSON encoded factors breakdown
-    
-    location = Column(String(255), nullable=False)
-    latitude = Column(Float, nullable=False)
-    longitude = Column(Float, nullable=False)
-    image_path = Column(String(255), nullable=True)
-    
-    # Status: 'Active', 'Under Review', 'Verified', 'Resolved'
-    status = Column(String(30), default='Active', nullable=False)
-    
-    affected_people = Column(Integer, default=0)
-    infrastructure_damage = Column(String(50), default='Moderate')  # None, Moderate, Severe, Catastrophic
-    admin_notes = Column(Text, nullable=True)
-    
-    user_id = Column(Integer, ForeignKey('users.id'), nullable=True)
-    reporter = relationship('User', back_populates='incidents')
-    
-    # Demo flag to transparently highlight synthetic/demo data
-    is_demo = Column(Integer, default=0)
-    
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    source = Column(String(200), nullable=False)
+    file_path = Column(String(300), nullable=False)
+    file_type = Column(String(10), default="csv")
+    record_count = Column(Integer, default=0)
+    feature_count = Column(Integer, default=0)
+    missing_values_count = Column(Integer, default=0)
+    duplicate_count = Column(Integer, default=0)
+    quality_score = Column(Float, default=95.0) # 0 to 100%
+    status = Column(String(30), default="Active")
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    def to_dict(self):
-        factors = {}
-        if self.severity_factors:
-            try:
-                factors = json.loads(self.severity_factors)
-            except Exception:
-                factors = {}
+class PredictionLog(Base):
+    __tablename__ = "prediction_logs"
 
-        return {
-            'id': self.id,
-            'title': self.title,
-            'description': self.description,
-            'category': self.category,
-            'predicted_category': self.predicted_category,
-            'prediction_confidence': round(self.prediction_confidence, 2) if self.prediction_confidence else 0.0,
-            'severity': self.severity,
-            'severity_score': round(self.severity_score, 1) if self.severity_score else 50.0,
-            'severity_factors': factors,
-            'location': self.location,
-            'latitude': self.latitude,
-            'longitude': self.longitude,
-            'image_path': self.image_path,
-            'status': self.status,
-            'affected_people': self.affected_people,
-            'infrastructure_damage': self.infrastructure_damage,
-            'admin_notes': self.admin_notes,
-            'user_id': self.user_id,
-            'reporter_name': self.reporter.name if self.reporter else 'Anonymous Citizen',
-            'is_demo': bool(self.is_demo),
-            'created_at': self.created_at.isoformat() if self.created_at else None,
-            'updated_at': self.updated_at.isoformat() if self.updated_at else None
-        }
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), index=True, nullable=True)
+    model_name = Column(String(100), nullable=False) # heart_disease, diabetes, stroke, symptom_classifier
+    inputs = Column(JSON, nullable=False)
+    result = Column(JSON, nullable=False)
+    risk_level = Column(String(30), nullable=False) # Low, Moderate, High, Critical
+    confidence = Column(Float, nullable=False)
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
-
-def init_db(database_uri):
-    engine = create_engine(database_uri, echo=False)
-    Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    return Session, engine
+    user = relationship("User", back_populates="predictions")

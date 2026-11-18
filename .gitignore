@@ -1,6 +1,8 @@
 # Node / Vite
 node_modules/
+frontend/node_modules/
 dist/
+frontend/dist/
 .env.local
 .env.*.local
 npm-debug.log*
@@ -18,7 +20,6 @@ venv/
 ENV/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -31,9 +32,13 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.pytest_cache/
 
-# Database & Uploads
+# Database & Local Run Artifacts
+*.db
+*.sqlite
 *.sqlite3
+backend/*.db
 backend/uploads/*
 !backend/uploads/.gitkeep
 
@@ -43,9 +48,21 @@ backend/uploads/*
 .DS_Store
 Thumbs.db
 
-# Other unrelated projects in folder
+# Presentation & Unrelated Assets in Downloads folder
+*.pptx
+*.docx
+*.pdf
+CinemaAI_*
+courts_after_dark_*
+cinemaai-*
+presentation_assets/
+tmp_mpl/
 cinematch-ai/
 Proofly/
+build_*.py
+generate_*.py
+apply_full_animations.py
+Executive_Summary_Courts_After_Dark.md
 loan_approval_svm.ipynb
 loan_data.csv
-run_cinematch.bat
+run_disaster_ai.bat

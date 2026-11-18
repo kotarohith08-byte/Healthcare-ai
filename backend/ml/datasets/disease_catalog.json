@@ -1,0 +1,361 @@
+[
+  {
+    "name": "Diabetes Mellitus Type 2",
+    "icd10": "E11",
+    "category": "Endocrinology",
+    "severity": "Chronic",
+    "description": "A metabolic disorder characterized by high blood sugar, insulin resistance, and relative lack of insulin.",
+    "symptoms": [
+      "Frequent urination (polyuria)",
+      "Increased thirst (polydipsia)",
+      "Unexplained weight loss",
+      "Fatigue",
+      "Blurred vision",
+      "Slow-healing sores"
+    ],
+    "risk_factors": [
+      "Overweight / Obesity (BMI >= 25)",
+      "Physical inactivity",
+      "Age >= 45",
+      "Family history",
+      "History of gestational diabetes"
+    ],
+    "prevention": [
+      "Maintain healthy body weight",
+      "150 min moderate weekly aerobic exercise",
+      "Diet rich in fiber and whole grains, low in refined sugars",
+      "Annual HbA1c screening"
+    ],
+    "treatments": [
+      "Lifestyle modification (diet & exercise)",
+      "Metformin (first-line)",
+      "SGLT2 inhibitors",
+      "GLP-1 receptor agonists",
+      "Insulin therapy when indicated"
+    ],
+    "reference": "American Diabetes Association (ADA) Standards of Medical Care in Diabetes"
+  },
+  {
+    "name": "Essential (Primary) Hypertension",
+    "icd10": "I10",
+    "category": "Cardiology",
+    "severity": "Chronic",
+    "description": "Persistently elevated arterial blood pressure without an identifiable secondary cause, defined as systolic BP >= 130 mmHg or diastolic BP >= 80 mmHg.",
+    "symptoms": [
+      "Often asymptomatic ('silent killer')",
+      "Morning headaches",
+      "Dizziness",
+      "Palpitations",
+      "Visual changes (in severe stages)",
+      "Nosebleeds"
+    ],
+    "risk_factors": [
+      "High dietary sodium",
+      "Sedentary lifestyle",
+      "Tobacco use",
+      "Excess alcohol intake",
+      "Chronic psychological stress",
+      "Age > 65"
+    ],
+    "prevention": [
+      "DASH diet (rich in fruits, vegetables, low-fat dairy)",
+      "Sodium intake < 2,000 mg/day",
+      "Regular aerobic cardiovascular exercise",
+      "Smoking cessation"
+    ],
+    "treatments": [
+      "ACE inhibitors / ARBs",
+      "Calcium channel blockers",
+      "Thiazide diuretics",
+      "Beta-blockers",
+      "Regular home blood pressure monitoring"
+    ],
+    "reference": "ACC/AHA Guidelines for High Blood Pressure in Adults"
+  },
+  {
+    "name": "Acute Coronary Syndrome / Myocardial Infarction",
+    "icd10": "I21",
+    "category": "Cardiology",
+    "severity": "Emergency",
+    "description": "Acute ischemia of myocardial tissue resulting from acute coronary artery occlusion by atherosclerotic plaque rupture and thrombosis.",
+    "symptoms": [
+      "Substernal chest pressure / crushing pain",
+      "Radiation to left arm, shoulder, jaw, or neck",
+      "Diaphoresis (cold sweats)",
+      "Dyspnea",
+      "Nausea / vomiting",
+      "Presyncope"
+    ],
+    "risk_factors": [
+      "Atherosclerosis",
+      "Smoking",
+      "Hyperlipidemia (elevated LDL)",
+      "Diabetes mellitus",
+      "Hypertension",
+      "Male gender > 45, female > 55"
+    ],
+    "prevention": [
+      "Statin therapy for hyperlipidemia",
+      "Cardiovascular exercise",
+      "Mediterranean diet",
+      "Strict blood pressure and glucose control",
+      "Aspirin in secondary prevention"
+    ],
+    "treatments": [
+      "Immediate EMS dispatch",
+      "Percutaneous Coronary Intervention (PCI / stent)",
+      "Dual antiplatelet therapy (Aspirin + P2Y12 inhibitor)",
+      "Anticoagulation",
+      "Beta-blockers & ACE inhibitors"
+    ],
+    "reference": "ACC/AHA Guidelines for the Management of Patients With STEMI / NSTEMI"
+  },
+  {
+    "name": "Bronchial Asthma",
+    "icd10": "J45",
+    "category": "Pulmonology",
+    "severity": "Chronic / Episodic",
+    "description": "A chronic inflammatory disorder of the airways characterized by variable and recurring symptoms, reversible airflow obstruction, and bronchospasm.",
+    "symptoms": [
+      "Expiratory wheezing",
+      "Shortness of breath",
+      "Chest tightness",
+      "Nocturnal dry cough",
+      "Exercise-induced dyspnea"
+    ],
+    "risk_factors": [
+      "Atopy / personal allergic history",
+      "Family history of asthma",
+      "Exposure to airborne allergens (dust mites, pollen, pet dander)",
+      "Air pollution",
+      "Occupational irritants"
+    ],
+    "prevention": [
+      "Avoidance of known environmental triggers",
+      "Use of hypoallergenic bedding",
+      "Annual influenza and pneumococcal vaccination",
+      "Adherence to controller inhalers"
+    ],
+    "treatments": [
+      "Inhaled Corticosteroids (ICS) as daily controller",
+      "Short-Acting Beta Agonists (SABA e.g. Albuterol) as rescue",
+      "Long-Acting Beta Agonists (LABA)",
+      "Leukotriene receptor antagonists",
+      "Biologics for severe eosinophilic asthma"
+    ],
+    "reference": "Global Initiative for Asthma (GINA) Global Strategy for Asthma Management and Prevention"
+  },
+  {
+    "name": "Community-Acquired Pneumonia",
+    "icd10": "J18",
+    "category": "Pulmonology",
+    "severity": "Urgent",
+    "description": "Infection of the pulmonary parenchyma acquired outside of hospital settings, causing alveolar consolidation and impaired gas exchange.",
+    "symptoms": [
+      "Productive cough with purulent or rust-colored sputum",
+      "High fever with shaking chills (rigors)",
+      "Pleuritic chest pain (worse with deep breaths)",
+      "Dyspnea / tachypnea",
+      "Fatigue and anorexia",
+      "Confusion (especially in elderly)"
+    ],
+    "risk_factors": [
+      "Age < 2 or > 65",
+      "Chronic lung disease (COPD, asthma)",
+      "Immunosuppression",
+      "Cigarette smoking",
+      "Aspiration risk"
+    ],
+    "prevention": [
+      "Pneumococcal polysaccharide / conjugate vaccines",
+      "Annual influenza vaccination",
+      "Smoking cessation",
+      "Hand hygiene"
+    ],
+    "treatments": [
+      "Empiric antibiotics (e.g. Amoxicillin, Macrolides, Respiratory fluoroquinolones)",
+      "Supplemental oxygen for hypoxemia",
+      "Systemic hydration",
+      "Antipyretics and chest physiotherapy"
+    ],
+    "reference": "Infectious Diseases Society of America (IDSA) / ATS Guidelines on CAP"
+  },
+  {
+    "name": "Ischemic Stroke",
+    "icd10": "I63",
+    "category": "Neurology",
+    "severity": "Emergency",
+    "description": "Focal neurological deficit caused by sudden occlusion of a cerebral blood vessel resulting in cerebral infarction.",
+    "symptoms": [
+      "Unilateral facial drooping",
+      "Arm / leg weakness or hemiplegia",
+      "Aphasia / slurred speech",
+      "Visual field defects (hemianopia)",
+      "Ataxia and loss of balance",
+      "Severe sudden vertigo"
+    ],
+    "risk_factors": [
+      "Atrial fibrillation",
+      "Carotid artery stenosis",
+      "Hypertension",
+      "Diabetes mellitus",
+      "Hyperlipidemia",
+      "History of TIA (Transient Ischemic Attack)"
+    ],
+    "prevention": [
+      "Anticoagulation in atrial fibrillation (DOACs/Warfarin)",
+      "Carotid endarterectomy in severe stenosis",
+      "Aggressive BP control",
+      "Antiplatelet therapy"
+    ],
+    "treatments": [
+      "Intravenous thrombolysis (IV Alteplase / Tenecteplase within 4.5 hours)",
+      "Mechanical thrombectomy (within 6-24 hours for large vessel occlusion)",
+      "Stroke unit admission",
+      "Early rehabilitation therapy"
+    ],
+    "reference": "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke"
+  },
+  {
+    "name": "Gastroesophageal Reflux Disease (GERD)",
+    "icd10": "K21",
+    "category": "Gastroenterology",
+    "severity": "Moderate",
+    "description": "A condition which develops when the reflux of stomach contents causes troublesome symptoms and/or complications into the esophagus.",
+    "symptoms": [
+      "Heartburn (pyrosis)",
+      "Acid regurgitation",
+      "Epigastric pain",
+      "Dysphagia",
+      "Chronic dry cough",
+      "Globus sensation in throat"
+    ],
+    "risk_factors": [
+      "Hiatal hernia",
+      "Obesity",
+      "Pregnancy",
+      "Delayed gastric emptying",
+      "Connective tissue disorders",
+      "Smoking"
+    ],
+    "prevention": [
+      "Avoid lying down for 3 hours after eating",
+      "Elevate head of bed 6 inches",
+      "Avoid chocolate, peppermint, caffeine, fatty foods, and citrus",
+      "Weight loss"
+    ],
+    "treatments": [
+      "Proton Pump Inhibitors (Omeprazole, Pantoprazole)",
+      "H2-receptor antagonists (Famotidine)",
+      "Antacids for quick symptom relief",
+      "Laparoscopic Nissen fundoplication in refractory cases"
+    ],
+    "reference": "ACG Clinical Guideline for the Diagnosis and Management of GERD"
+  },
+  {
+    "name": "COVID-19 (SARS-CoV-2)",
+    "icd10": "U07.1",
+    "category": "Infectious Disease",
+    "severity": "Urgent",
+    "description": "An infectious respiratory illness caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).",
+    "symptoms": [
+      "Fever or chills",
+      "Dry cough",
+      "Shortness of breath / dyspnea",
+      "Fatigue",
+      "Sudden loss of taste (ageusia) or smell (anosmia)",
+      "Sore throat",
+      "Congestion or runny nose",
+      "Nausea or diarrhea"
+    ],
+    "risk_factors": [
+      "Age >= 65",
+      "Cardiovascular disease",
+      "Diabetes",
+      "Chronic respiratory disease",
+      "Immunocompromised states"
+    ],
+    "prevention": [
+      "COVID-19 mRNA vaccines and boosters",
+      "Wearing high-filtration masks (N95/KN95) in crowded indoor areas",
+      "Hand hygiene",
+      "Adequate ventilation"
+    ],
+    "treatments": [
+      "Antiviral therapy (Paxlovid / Nirmatrelvir-Ritonavir, Remdesivir)",
+      "Supportive care and hydration",
+      "Oxygen supplementation in hypoxemia",
+      "Corticosteroids (Dexamethasone) in severe oxygen-requiring cases"
+    ],
+    "reference": "NIH COVID-19 Treatment Guidelines / WHO Guidelines"
+  },
+  {
+    "name": "Migraine",
+    "icd10": "G43",
+    "category": "Neurology",
+    "severity": "Episodic",
+    "description": "A neurological condition characterized by recurrent, disabling, unilateral pulsating headaches accompanied by nausea, photophobia, and phonophobia.",
+    "symptoms": [
+      "Throbbing, pulsating unilateral headache",
+      "Sensitivity to light (photophobia)",
+      "Sensitivity to sound (phonophobia)",
+      "Nausea and vomiting",
+      "Visual aura (zigzag lines, blind spots)",
+      "Neck stiffness"
+    ],
+    "risk_factors": [
+      "Female sex (3x higher incidence)",
+      "Family history of migraine",
+      "Hormonal variations",
+      "High stress levels",
+      "Irregular sleep patterns"
+    ],
+    "prevention": [
+      "Identification and avoidance of dietary and environmental triggers",
+      "Stress management / biofeedback",
+      "Preventive medications: Beta-blockers, Topiramate, CGRP antagonists"
+    ],
+    "treatments": [
+      "Triptans (Sumatriptan, Rizatriptan)",
+      "CGRP receptor antagonists (Rimegepant, Ubrogepant)",
+      "NSAIDs (Naproxen, Ibuprofen) with antiemetics",
+      "Rest in a quiet, dark room"
+    ],
+    "reference": "American Headache Society (AHS) Guidelines for Migraine Management"
+  },
+  {
+    "name": "Osteoarthritis",
+    "icd10": "M15-M19",
+    "category": "Rheumatology",
+    "severity": "Chronic",
+    "description": "Degenerative joint disease involving progressive degradation of articular cartilage, subchondral bone remodeling, and secondary synovitis.",
+    "symptoms": [
+      "Joint aching pain worsening with weight-bearing activities",
+      "Morning stiffness lasting < 30 minutes",
+      "Crepitus (grating sound) on joint movement",
+      "Bony enlargements (Heberden's and Bouchard's nodes)",
+      "Joint effusion and reduced range of motion"
+    ],
+    "risk_factors": [
+      "Aging",
+      "Female sex",
+      "Obesity (particularly for knee OA)",
+      "Joint injury or repetitive occupational stress",
+      "Genetics"
+    ],
+    "prevention": [
+      "Maintain healthy weight to reduce mechanical load on knees and hips",
+      "Low-impact physical exercise (swimming, cycling)",
+      "Avoidance of joint injuries",
+      "Core and quadriceps muscle strengthening"
+    ],
+    "treatments": [
+      "Physical therapy and quadriceps strengthening",
+      "Topical NSAIDs (Diclofenac gel)",
+      "Oral NSAIDs / Acetaminophen",
+      "Intra-articular corticosteroid or hyaluronic acid injections",
+      "Total joint replacement (arthroplasty) for advanced disease"
+    ],
+    "reference": "ACR / Arthritis Foundation Guideline for the Management of Osteoarthritis"
+  }
+]

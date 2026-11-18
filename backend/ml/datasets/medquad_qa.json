@@ -1,0 +1,258 @@
+[
+  {
+    "id": "MED-001",
+    "question": "What are the early warning signs of a myocardial infarction (heart attack)?",
+    "category": "Cardiology",
+    "answer": "Early warning signs of a myocardial infarction include crushing pressure, tightness, or pain in the center of the chest lasting more than a few minutes; pain radiating to the left arm, neck, jaw, back, or stomach; shortness of breath with or without chest discomfort; cold sweats; unexplained fatigue; dizziness or lightheadedness; and nausea or vomiting. In women, elderly individuals, and people with diabetes, symptoms may be atypical, such as sudden profound fatigue, breathlessness without overt chest pain, or indigestion-like epigastric discomfort. This is a medical emergency requiring immediate 911/emergency dispatch.",
+    "urgency": "Emergency",
+    "source": "NIH / American Heart Association Guidelines",
+    "keywords": [
+      "chest pain",
+      "heart attack",
+      "myocardial infarction",
+      "arm pain",
+      "shortness of breath",
+      "sweating"
+    ]
+  },
+  {
+    "id": "MED-002",
+    "question": "How is Type 2 Diabetes diagnosed and what are the clinical threshold values?",
+    "category": "Endocrinology",
+    "answer": "Type 2 Diabetes Mellitus is diagnosed using standard laboratory venous blood plasma criteria established by the American Diabetes Association (ADA): 1. Fasting Plasma Glucose (FPG) >= 126 mg/dL (7.0 mmol/L) after an 8-hour fast; 2. Glycated Hemoglobin (HbA1c) >= 6.5% (48 mmol/mol) standardized to NGSP assay; 3. Two-hour 75g Oral Glucose Tolerance Test (OGTT) >= 200 mg/dL (11.1 mmol/L); or 4. Classic hyperglycemic symptoms (polyuria, polydipsia, unintentional weight loss) with a random plasma glucose >= 200 mg/dL. In the absence of unequivocal hyperglycemia, diagnosis requires two abnormal test results from either the same sample or two separate test samples.",
+    "urgency": "Routine",
+    "source": "American Diabetes Association (ADA) Standards of Care",
+    "keywords": [
+      "diabetes",
+      "hba1c",
+      "blood glucose",
+      "fasting glucose",
+      "hyperglycemia",
+      "polyuria",
+      "thirst"
+    ]
+  },
+  {
+    "id": "MED-003",
+    "question": "What is the FAST protocol for identifying an acute stroke?",
+    "category": "Neurology",
+    "answer": "The FAST protocol is an evidence-based clinical mnemonic for recognizing acute ischemic or hemorrhagic stroke: F - Face drooping: Does one side of the face droop or feel numb? Ask the person to smile. A - Arm weakness: Is one arm weak or numb? Ask the person to raise both arms. Does one drift downward? S - Speech difficulty: Is speech slurred, abnormal, or hard to comprehend? Ask the person to repeat a simple sentence. T - Time to call 911 / emergency services immediately: Note the exact time symptoms first appeared, as intravenous thrombolytic therapy (tPA / Tenecteplase) must typically be administered within 3 to 4.5 hours of symptom onset.",
+    "urgency": "Emergency",
+    "source": "American Stroke Association / CDC Guidelines",
+    "keywords": [
+      "stroke",
+      "fast protocol",
+      "facial drooping",
+      "arm weakness",
+      "slurred speech",
+      "tpa",
+      "thrombolysis"
+    ]
+  },
+  {
+    "id": "MED-004",
+    "question": "What causes hypertension and what lifestyle changes effectively lower blood pressure?",
+    "category": "Cardiology",
+    "answer": "Primary (essential) hypertension results from complex interactions between genetic predisposition, arterial stiffness, renal sodium handling, and lifestyle factors including excessive dietary sodium (>2,300 mg/day), physical inactivity, obesity, chronic stress, and alcohol consumption. Secondary hypertension is caused by identifiable underlying conditions such as renal artery stenosis, chronic kidney disease, obstructive sleep apnea, or primary aldosteronism. Evidence-based non-pharmacological interventions include the Dietary Approaches to Stop Hypertension (DASH diet) rich in potassium, calcium, and magnesium (averaging 8-14 mmHg systolic reduction), weight reduction (approx. 1 mmHg drop per 1 kg lost), 150 minutes/week of moderate aerobic exercise, sodium restriction (<1,500 mg/day for optimal effect), and limiting alcohol.",
+    "urgency": "Routine",
+    "source": "AHA / ACC Guideline for Prevention, Detection, and Management of High Blood Pressure",
+    "keywords": [
+      "hypertension",
+      "blood pressure",
+      "dash diet",
+      "sodium",
+      "exercise",
+      "systolic",
+      "diastolic"
+    ]
+  },
+  {
+    "id": "MED-005",
+    "question": "What are the clinical differences between viral bronchitis, asthma, and pneumonia?",
+    "category": "Pulmonology",
+    "answer": "While all three present with cough, they differ significantly in pathophysiology and clinical findings: 1. Acute Bronchitis is a self-limiting inflammation of the large airways, almost always viral (rhinovirus, coronavirus, influenza), characterized by a persistent cough (10-20 days) often with sputum, normal lung sounds or coarse rhonchi that clear with coughing, and absence of consolidation on chest X-ray. 2. Bronchial Asthma is a chronic inflammatory disorder of the airways causing reversible bronchial hyperresponsiveness; hallmarks include episodic wheezing, chest tightness, nocturnal cough, and response to inhaled bronchodilators. 3. Bacterial or Viral Pneumonia involves alveolar infection and consolidation; patients present with high fever, chills, pleuritic chest pain, productive cough with rust-colored or purulent sputum, tachypnea, focal crackles/bronchial breath sounds, and lobar infiltrates on chest radiography requiring targeted antibiotic or supportive antiviral therapy.",
+    "urgency": "Urgent",
+    "source": "American Thoracic Society / Infectious Diseases Society of America (IDSA)",
+    "keywords": [
+      "cough",
+      "bronchitis",
+      "asthma",
+      "pneumonia",
+      "wheezing",
+      "crackles",
+      "chest xray",
+      "fever"
+    ]
+  },
+  {
+    "id": "MED-006",
+    "question": "What are red-flag symptoms in acute headache requiring emergency imaging?",
+    "category": "Neurology",
+    "answer": "The 'SNOOP' mnemonic identifies red flags for secondary life-threatening headaches: S - Systemic symptoms (fever, weight loss, night sweats, meningismus) or Secondary risk factors (HIV, active malignancy). N - Neurological symptoms or focal deficits (confusion, papilledema, diplopia, hemiparesis, seizure). O - Onset sudden or abrupt ('thunderclap' headache reaching peak intensity within seconds to one minute, suggestive of subarachnoid hemorrhage). O - Older age at onset (new headache in patients >50 years, considering giant cell arteritis). P - Pattern change or Progression (headache worsening with Valsalva maneuver, positional changes, coughing, or progressive headache waking patient from sleep). Any of these warrants immediate emergency non-contrast head CT and emergency medical evaluation.",
+    "urgency": "Emergency",
+    "source": "American Headache Society / International Headache Society (ICHD-3)",
+    "keywords": [
+      "headache",
+      "thunderclap",
+      "migraine",
+      "subarachnoid hemorrhage",
+      "focal deficit",
+      "snoop criteria"
+    ]
+  },
+  {
+    "id": "MED-007",
+    "question": "What is GERD (Gastroesophageal Reflux Disease) and what are its complications?",
+    "category": "Gastroenterology",
+    "answer": "Gastroesophageal Reflux Disease (GERD) is a chronic digestive condition where gastric acid or bile frequently flows retrograde into the esophagus, irritating the mucosal lining due to transient lower esophageal sphincter (LES) relaxations. Cardinal symptoms include pyrosis (heartburn), acid regurgitation, epigastric pain, dysphagia, water brash, and chronic atypical symptoms like nocturnal dry cough, hoarseness, and laryngitis. Long-term untreated GERD can lead to serious complications including reflux esophagitis, esophageal strictures, Barrett's esophagus (metaplasia from squamous to columnar epithelium increasing risk of adenocarcinoma), and chronic aspiration. Management includes PPIs, H2 receptor blockers, dietary triggers avoidance, head-of-bed elevation, and avoiding recumbency within 3 hours after meals.",
+    "urgency": "Routine",
+    "source": "American College of Gastroenterology (ACG) Clinical Guidelines",
+    "keywords": [
+      "gerd",
+      "acid reflux",
+      "heartburn",
+      "esophagus",
+      "barretts",
+      "omeprazole",
+      "indigestion"
+    ]
+  },
+  {
+    "id": "MED-008",
+    "question": "What are the common clinical presentations and diagnostic markers of COVID-19?",
+    "category": "Infectious Disease",
+    "answer": "SARS-CoV-2 infection (COVID-19) causes a broad spectrum of illness from asymptomatic infection to critical respiratory distress. Common symptoms include fever or chills, dry cough, profound fatigue, dyspnea, anosmia (loss of smell) and ageusia (loss of taste), sore throat, congestion, headache, myalgias, and gastrointestinal symptoms like diarrhea and nausea. Severe manifestations include hypoxemia (SpO2 < 94% on room air), acute respiratory distress syndrome (ARDS), thromboembolic events, and cytokine release syndrome. Definitive diagnosis is made by RT-PCR or rapid antigen testing. Elevated CRP, ferritin, D-dimer, and lymphopenia are common inflammatory markers correlated with disease severity.",
+    "urgency": "Urgent",
+    "source": "World Health Organization (WHO) / NIH COVID-19 Treatment Guidelines",
+    "keywords": [
+      "covid-19",
+      "coronavirus",
+      "loss of smell",
+      "anosmia",
+      "fever",
+      "cough",
+      "spO2",
+      "hypoxemia",
+      "antigen"
+    ]
+  },
+  {
+    "id": "MED-009",
+    "question": "What is the difference between Osteoarthritis and Rheumatoid Arthritis?",
+    "category": "Rheumatology",
+    "answer": "Osteoarthritis (OA) is a degenerative 'wear-and-tear' non-inflammatory or low-grade inflammatory joint disease resulting from progressive mechanical breakdown of articular cartilage and subchondral bone remodeling, typically affecting weight-bearing joints (knees, hips, lumbar spine) and distal interphalangeal joints (Heberden's nodes). Pain typically worsens with joint use and eases with rest, with morning stiffness lasting <30 minutes. In contrast, Rheumatoid Arthritis (RA) is a chronic systemic autoimmune disorder causing symmetric inflammatory polyarthritis, targeting the synovial membrane, prominently affecting metacarpophalangeal (MCP) and proximal interphalangeal (PIP) joints. RA is characterized by morning stiffness lasting >60 minutes, systemic symptoms (fatigue, low fever, subcutaneous nodules), and laboratory markers like positive Rheumatoid Factor (RF) and anti-cyclic citrullinated peptide (anti-CCP) antibodies.",
+    "urgency": "Routine",
+    "source": "American College of Rheumatology (ACR)",
+    "keywords": [
+      "arthritis",
+      "osteoarthritis",
+      "rheumatoid arthritis",
+      "joint pain",
+      "morning stiffness",
+      "synovial",
+      "cartilage"
+    ]
+  },
+  {
+    "id": "MED-010",
+    "question": "What should a person do during an acute asthma exacerbation (asthma attack)?",
+    "category": "Pulmonology",
+    "answer": "During an acute asthma attack: 1. Sit upright immediately; do not lie down. 2. Take a quick-relief fast-acting bronchodilator (such as Albuterol / Salbutamol inhaler): inhale 2 to 4 puffs (using a spacer if available), waiting 1 minute between puffs. 3. Remain calm and practice pursed-lip breathing to maximize oxygenation. 4. If symptoms do not improve after 5-10 minutes, take another 2 to 4 puffs. 5. Call emergency services (911) immediately if: breathing difficulty is severe or rapidly worsening; the individual cannot speak in full sentences; lips, gums, or fingernails turn blue or pale (cyanosis); chest and ribs suck inwards during breathing (retractions); or peak flow is less than 50% of personal best.",
+    "urgency": "Emergency",
+    "source": "Global Initiative for Asthma (GINA) / CDC Asthma Action Plan",
+    "keywords": [
+      "asthma attack",
+      "albuterol",
+      "inhaler",
+      "wheezing",
+      "bronchodilator",
+      "cyanosis",
+      "emergency"
+    ]
+  },
+  {
+    "id": "MED-011",
+    "question": "What are the common causes and prevention strategies for Kidney Stones (Nephrolithiasis)?",
+    "category": "Nephrology",
+    "answer": "Kidney stones form when urinary supersaturation of crystal-forming substances exceeds chemical solubility inhibitors. The most common types are Calcium Oxalate (approx. 70-80%), followed by Calcium Phosphate, Uric Acid, Struvite (infection-related), and Cystine. Risk factors include inadequate fluid intake, high dietary sodium, excessive animal protein, obesity, hyperparathyroidism, and high dietary oxalate. Primary prevention strategies include: maintaining generous hydration to achieve urinary output >2.5 liters/day; limiting dietary sodium to <2,300 mg/day (which decreases urinary calcium excretion); maintaining normal dietary calcium intake (1,000-1,200 mg/day) as dietary calcium binds oxalate in the intestine; limiting excessive animal purines; and increasing dietary citrate (lemons, limes, citrus) which inhibits crystal crystallization.",
+    "urgency": "Routine",
+    "source": "American Urological Association (AUA) Guidelines",
+    "keywords": [
+      "kidney stones",
+      "nephrolithiasis",
+      "flank pain",
+      "calcium oxalate",
+      "hydration",
+      "hematuria"
+    ]
+  },
+  {
+    "id": "MED-012",
+    "question": "What are the stages of Chronic Kidney Disease (CKD) and how is it monitored?",
+    "category": "Nephrology",
+    "answer": "Chronic Kidney Disease is classified into 5 stages according to Kidney Disease: Improving Global Outcomes (KDIGO) criteria based on estimated Glomerular Filtration Rate (eGFR in mL/min/1.73m2) and persistent urinary albumin-to-creatinine ratio (uACR): Stage 1: eGFR >= 90 with kidney damage (proteinuria or structural anomalies); Stage 2: eGFR 60-89 (mild reduction); Stage 3a: eGFR 45-59 (mild-to-moderate reduction); Stage 3b: eGFR 30-44 (moderate-to-severe reduction); Stage 4: eGFR 15-29 (severe reduction); Stage 5: eGFR < 15 or dialysis (Kidney Failure / ESRD). Monitoring requires serial serum creatinine, eGFR calculations, uACR spot urine checks, blood pressure control (<120-130 systolic), glycemic control in diabetes, and avoidance of nephrotoxic medications such as NSAIDs and iodinated radiocontrast agents.",
+    "urgency": "Routine",
+    "source": "KDIGO Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+    "keywords": [
+      "ckd",
+      "kidney disease",
+      "egfr",
+      "creatinine",
+      "proteinuria",
+      "albuminuria",
+      "dialysis"
+    ]
+  },
+  {
+    "id": "MED-013",
+    "question": "What are the primary symptoms and triggers of Migraine headaches?",
+    "category": "Neurology",
+    "answer": "Migraine is a neurovascular disorder characterized by recurrent attacks of moderate to severe throbbing or pulsating unilateral head pain lasting 4 to 72 hours. Cardinal features include photophobia (light sensitivity), phonophobia (sound sensitivity), osmophobia, nausea, and vomiting. Symptoms typically intensify with routine physical activity. Approximately one-third of sufferers experience an aura (reversible neurological visual scintillating scotomas, zigzag lines, paresthesias, or speech disturbances) 20 to 60 minutes prior to headache onset. Common triggers include hormonal fluctuations (estrogen drop), emotional stress, sleep deprivation or oversleeping, sensory stimuli (bright lights, loud noise, strong perfumes), skipping meals, dehydration, and dietary triggers (aged cheeses, MSG, nitrates in cured meats, aspartame, alcohol).",
+    "urgency": "Routine",
+    "source": "International Headache Society (IHS) / Mayo Clinic Neurology",
+    "keywords": [
+      "migraine",
+      "headache",
+      "aura",
+      "photophobia",
+      "throbbing",
+      "triptans",
+      "nausea"
+    ]
+  },
+  {
+    "id": "MED-014",
+    "question": "How is Anaphylaxis recognized and what is the first-line emergency treatment?",
+    "category": "Immunology",
+    "answer": "Anaphylaxis is an acute, severe, life-threatening systemic hypersensitivity allergic reaction characterized by rapid onset (minutes to hours) following exposure to a trigger (peanuts, tree nuts, shellfish, insect stings, medications such as penicillin, latex). Diagnostic criteria include acute onset involving skin or mucosal tissue (generalized hives, pruritus, flushed lips/tongue swelling) accompanied by either: 1. Respiratory compromise (dyspnea, wheeze, stridor, hypoxemia) or 2. Reduced blood pressure or associated symptoms of end-organ dysfunction (syncope, incontinence, hypotonia). The immediate FIRST-LINE treatment is INTRAMUSCULAR EPINEPHRINE (EpiPen / auto-injector, 0.3 mg for adults, 0.15 mg for children) injected into the anterolateral aspect of the middle third of the thigh. Antihistamines and corticosteroids are secondary adjuncts and must NEVER delay epinephrine administration. Call 911 immediately.",
+    "urgency": "Emergency",
+    "source": "World Allergy Organization (WAO) Guidelines / American Academy of Allergy, Asthma & Immunology (AAAAI)",
+    "keywords": [
+      "anaphylaxis",
+      "epipen",
+      "epinephrine",
+      "allergic reaction",
+      "hives",
+      "angioedema",
+      "stridor",
+      "emergency"
+    ]
+  },
+  {
+    "id": "MED-015",
+    "question": "What are the causes, symptoms, and immediate steps for Hypoglycemia?",
+    "category": "Endocrinology",
+    "answer": "Hypoglycemia is defined biochemically as blood glucose < 70 mg/dL (3.9 mmol/L). In people with diabetes, it is commonly triggered by excess insulin or sulfonylurea dosing, skipped or delayed meals, strenuous unexpected exercise, or alcohol consumption without food. Autonomic (adrenergic/cholinergic) symptoms include shakiness, diaphoresis (cold sweat), tachycardia/palpitations, acute anxiety, pallor, and intense hunger. Neuroglycopenic symptoms include dizziness, confusion, difficulty speaking, blurred vision, irrational behavior, seizures, and loss of consciousness. Immediate management follows the 'Rule of 15': Consume 15 grams of fast-acting simple carbohydrates (4 ounces / 120 mL of fruit juice or regular soda, 3-4 glucose tablets, 1 tablespoon of sugar/honey). Recheck blood sugar after 15 minutes; if still <70 mg/dL, repeat with another 15g. Once stabilized, eat a meal with complex carbs and protein to prevent recurrent rebound hypoglycemia.",
+    "urgency": "Urgent",
+    "source": "American Diabetes Association (ADA) Clinical Guidelines",
+    "keywords": [
+      "hypoglycemia",
+      "low blood sugar",
+      "rule of 15",
+      "glucose tablets",
+      "shakiness",
+      "sweating",
+      "diabetic emergency"
+    ]
+  }
+]

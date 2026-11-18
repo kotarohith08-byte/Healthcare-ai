@@ -1,0 +1,274 @@
+{
+  "symptom_classifier": {
+    "name": "Multi-Condition Symptom Diagnostic Classifier",
+    "algorithm": "Random Forest Ensemble (100 Trees)",
+    "target": "Differential Disease Prognosis (42 Classes)",
+    "features_count": 126,
+    "training_samples": 3931,
+    "test_samples": 983,
+    "accuracy": 0.9949,
+    "f1_score": 0.9949,
+    "top_features": [
+      {
+        "feature": "acute_liver_failure",
+        "importance": 0.0178
+      },
+      {
+        "feature": "spotting_urination",
+        "importance": 0.0173
+      },
+      {
+        "feature": "muscle_pain",
+        "importance": 0.0164
+      },
+      {
+        "feature": "vomiting",
+        "importance": 0.0154
+      },
+      {
+        "feature": "dehydration",
+        "importance": 0.0151
+      },
+      {
+        "feature": "back_pain",
+        "importance": 0.0147
+      },
+      {
+        "feature": "muscle_weakness",
+        "importance": 0.0144
+      },
+      {
+        "feature": "sweating",
+        "importance": 0.0141
+      },
+      {
+        "feature": "dischromic_patches",
+        "importance": 0.0136
+      },
+      {
+        "feature": "mild_fever",
+        "importance": 0.0136
+      },
+      {
+        "feature": "high_fever",
+        "importance": 0.0135
+      },
+      {
+        "feature": "family_history",
+        "importance": 0.0134
+      },
+      {
+        "feature": "weight_loss",
+        "importance": 0.0129
+      },
+      {
+        "feature": "headache",
+        "importance": 0.0128
+      },
+      {
+        "feature": "joint_pain",
+        "importance": 0.0126
+      }
+    ]
+  },
+  "heart_disease": {
+    "name": "Cardiovascular Heart Disease Risk Predictor",
+    "dataset": "UCI Cleveland Clinic Heart Disease Benchmark",
+    "algorithm": "StandardScaler + Random Forest Classifier",
+    "training_samples": 768,
+    "test_samples": 257,
+    "accuracy": 0.8327,
+    "precision": 0.8359,
+    "recall": 0.9953,
+    "f1_score": 0.9087,
+    "roc_auc": 0.773,
+    "confusion_matrix": {
+      "true_negative": 0,
+      "false_positive": 42,
+      "false_negative": 1,
+      "true_positive": 214
+    },
+    "feature_importance": [
+      {
+        "feature": "thalach",
+        "importance": 0.2717
+      },
+      {
+        "feature": "age",
+        "importance": 0.1619
+      },
+      {
+        "feature": "chol",
+        "importance": 0.1043
+      },
+      {
+        "feature": "trestbps",
+        "importance": 0.1034
+      },
+      {
+        "feature": "oldpeak",
+        "importance": 0.0836
+      },
+      {
+        "feature": "cp",
+        "importance": 0.0755
+      },
+      {
+        "feature": "ca",
+        "importance": 0.0685
+      },
+      {
+        "feature": "slope",
+        "importance": 0.0307
+      },
+      {
+        "feature": "restecg",
+        "importance": 0.0294
+      },
+      {
+        "feature": "thal",
+        "importance": 0.0273
+      },
+      {
+        "feature": "exang",
+        "importance": 0.0195
+      },
+      {
+        "feature": "sex",
+        "importance": 0.0137
+      },
+      {
+        "feature": "fbs",
+        "importance": 0.0105
+      }
+    ]
+  },
+  "diabetes": {
+    "name": "Type-2 Diabetes Mellitus Risk Predictor",
+    "dataset": "CDC Behavioral Risk Factor Surveillance System (BRFSS)",
+    "algorithm": "StandardScaler + Random Forest Classifier",
+    "training_samples": 1125,
+    "test_samples": 375,
+    "accuracy": 0.6747,
+    "precision": 0.701,
+    "recall": 0.8536,
+    "f1_score": 0.7698,
+    "roc_auc": 0.7298,
+    "confusion_matrix": {
+      "true_negative": 49,
+      "false_positive": 87,
+      "false_negative": 35,
+      "true_positive": 204
+    },
+    "feature_importance": [
+      {
+        "feature": "BMI",
+        "importance": 0.1731
+      },
+      {
+        "feature": "Age",
+        "importance": 0.1655
+      },
+      {
+        "feature": "HighBP",
+        "importance": 0.1355
+      },
+      {
+        "feature": "GenHlth",
+        "importance": 0.1137
+      },
+      {
+        "feature": "PhysHlth",
+        "importance": 0.0868
+      },
+      {
+        "feature": "MentHlth",
+        "importance": 0.0831
+      },
+      {
+        "feature": "HighChol",
+        "importance": 0.0446
+      },
+      {
+        "feature": "HeartDiseaseorAttack",
+        "importance": 0.0324
+      },
+      {
+        "feature": "Smoker",
+        "importance": 0.0322
+      },
+      {
+        "feature": "Fruits",
+        "importance": 0.0263
+      },
+      {
+        "feature": "DiffWalk",
+        "importance": 0.0249
+      },
+      {
+        "feature": "Veggies",
+        "importance": 0.0248
+      },
+      {
+        "feature": "Sex",
+        "importance": 0.0231
+      },
+      {
+        "feature": "PhysActivity",
+        "importance": 0.0222
+      },
+      {
+        "feature": "Stroke",
+        "importance": 0.0117
+      }
+    ]
+  },
+  "stroke": {
+    "name": "Cerebrovascular Stroke Risk Predictor",
+    "dataset": "Clinical Stroke Health Records Cohort",
+    "algorithm": "Preprocessed Multi-Feature Random Forest",
+    "training_samples": 900,
+    "test_samples": 300,
+    "accuracy": 0.84,
+    "precision": 0.875,
+    "recall": 0.2333,
+    "f1_score": 0.3684,
+    "roc_auc": 0.8164,
+    "confusion_matrix": {
+      "true_negative": 238,
+      "false_positive": 2,
+      "false_negative": 46,
+      "true_positive": 14
+    },
+    "feature_importance": [
+      {
+        "feature": "age",
+        "importance": 0.3842
+      },
+      {
+        "feature": "avg_glucose_level",
+        "importance": 0.2215
+      },
+      {
+        "feature": "bmi",
+        "importance": 0.1654
+      },
+      {
+        "feature": "hypertension",
+        "importance": 0.0892
+      },
+      {
+        "feature": "heart_disease",
+        "importance": 0.0712
+      },
+      {
+        "feature": "smoking_status",
+        "importance": 0.0425
+      },
+      {
+        "feature": "work_type",
+        "importance": 0.026
+      }
+    ]
+  }
+}
