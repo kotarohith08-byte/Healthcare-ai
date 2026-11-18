@@ -1,4 +1,4 @@
-name: Deploy DisasterAI to GitHub Pages
+name: Deploy MedPulse AI to GitHub Pages
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies & Build
+      - name: Install dependencies & Build Frontend
         run: |
           cd frontend
           npm install
